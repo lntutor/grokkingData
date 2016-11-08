@@ -10,6 +10,7 @@ kafkaProducer.on('ready', function () {
 
 kafkaProducer.on('error', function (err) {
   console.log(err)
+  process.exit(1)
 })
 
 module.exports.kafkaProducer = kafkaProducer
