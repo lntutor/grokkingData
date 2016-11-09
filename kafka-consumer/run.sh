@@ -1,1 +1,1 @@
-pm2 start consumer.py -i 4
+pm2 start consumer.py
