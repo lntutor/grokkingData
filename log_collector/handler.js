@@ -7,7 +7,9 @@ module.exports = function(req, res) {
     return res.send({'ok': false, 'error': 'empty query'})
   }
   console.log(req.query)
-  var payloads = [{'topic': 'vidsell', 'message' : req.query}]
+  var payloads = [
+        { topic: 'vidsell', messages: [JSON.stringify(req.query)] }
+    ];
   kafkaProducer.send(payloads, function (err, data) {
       if (err) {
         console.log(err)

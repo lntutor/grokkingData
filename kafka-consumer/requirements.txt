@@ -1,0 +1,5 @@
+kafka==1.2.2
+elasticsearch==2.3.0
+PyYAML==3.11
+cython
+requests
