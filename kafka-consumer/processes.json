@@ -1,7 +1,6 @@
 {
-  "apps" : [{
-    "script"    : "log-consumer.py",
-    "instances" : "max",
-    "exec_mode" : "cluster"
-  }]
+  "script": "kafka-consumer.py",
+  "interpreter": "python",
+  "instances": "2",
+  "exec_mode": "cluster"
 }

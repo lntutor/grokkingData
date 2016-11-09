@@ -1,2 +1,1 @@
-#!/usr/bin/env bash
-pm2 start processes.json
+pm2 start kafka-consumer.py

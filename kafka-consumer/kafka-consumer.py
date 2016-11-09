@@ -10,6 +10,7 @@ class LogsConsumer(consumer.Base):
     def handle(self, message):
         json_log = json.loads(message.value)
         metric = json_log.get('metric', None)
+        print metric
         if not metric:
             return
 
