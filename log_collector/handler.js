@@ -6,6 +6,7 @@ module.exports = function(req, res) {
   if (!req.query || Object.keys(req.query) == 0) {
     return res.send({'ok': false, 'error': 'empty query'})
   }
+  req.query['timestamp'] = Date.now()
   console.log(req.query)
   var payloads = [
         { topic: 'vidsell', messages: [JSON.stringify(req.query)] }
