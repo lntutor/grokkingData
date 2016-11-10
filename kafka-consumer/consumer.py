@@ -1,7 +1,7 @@
 TOPIC = 'vidsell'
 
 import json
-from datetime import datetime
+import time
 
 from connection import consumer, elastic
 
@@ -14,7 +14,7 @@ class LogsConsumer(consumer.Base):
         if not metric:
             return
 
-        json_log['timestamp'] = datetime.now()
+        json_log['timestamp'] = time.time()
         result = elastic.client.index(index="vidsell", doc_type=metric, body=json_log)
         print str(result)
 
