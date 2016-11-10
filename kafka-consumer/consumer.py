@@ -14,7 +14,7 @@ class LogsConsumer(consumer.Base):
         if not metric:
             return
 
-        json_log['timestamp'] = time.time()
+        json_log['timestamp'] = int(time.time())
         result = elastic.client.index(index="vidsell", doc_type=metric, body=json_log)
         print str(result)
 
