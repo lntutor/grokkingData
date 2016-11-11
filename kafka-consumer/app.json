@@ -1,0 +1,6 @@
+{
+  "name": "logs-consumer",
+  "script": "consumer.py",
+  "exec_mode": "fork_mode",
+  "instances": 4
+}

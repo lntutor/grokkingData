@@ -1,6 +1,0 @@
-{
-  "script": "kafka-consumer.py",
-  "interpreter": "python",
-  "instances": "2",
-  "exec_mode": "cluster"
-}
