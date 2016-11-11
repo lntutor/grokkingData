@@ -8,7 +8,8 @@ class Base:
     def __init__(self, topic):
         self.topics = [topic]
         self.configs = {
-            "bootstrap_servers": KAFKA_HOST
+            "bootstrap_servers": KAFKA_HOST,
+            "group_id": "vidsell.worker.group"
         }
 
     def consume(self):

@@ -9,7 +9,7 @@ module.exports = function(req, res) {
   req.query['timestamp'] = Date.now()
   console.log(req.query)
   var payloads = [
-        { topic: 'vidsell', messages: [JSON.stringify(req.query)] }
+        { topic: 'vidsell', messages: [JSON.stringify(req.query)], partition: Date.now()%2}
     ];
   kafkaProducer.send(payloads, function (err, data) {
       if (err) {
